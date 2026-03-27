@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>História do Futebol</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.85);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* MENU */
+nav a {
+    color: #00c3ff;
+    text-decoration: none;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: red;
+}
+
+.btn {
+    background: red;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* SEÇÕES */
+section {
+    min-height: 100vh;
+    padding-top: 120px;
+    color: white;
+}
+
+#inicio {
+    background: url('https://images.unsplash.com/photo-1518091043644-c1d4457512c6') no-repeat center;
+    background-size: cover;
+}
+
+/* SOBRE */
+#sobre {
+    background: url('https://images.unsplash.com/photo-1522778034537-20a2486be803') no-repeat center;
+    background-size: cover;
+}
+
+/* HISTÓRIA */
+#historia {
+    background: url('https://images.unsplash.com/photo-1518091043644-c1d4457512c6') no-repeat center;
+    background-size: cover;
+}
+
+/* CONTATO */
+#contato {
+    background: url('https://images.unsplash.com/photo-1505842465776-3d90f6163101') no-repeat center;
+    background-size: cover;
+}
+
+/* OVERLAY */
+.overlay {
+    background: rgba(0,0,0,0.7);
+    min-height: 100vh;
+    padding: 120px 40px;
+}
+
+/* TEXTO */
+h1 {
+    margin-bottom: 20px;
+}
+
+p {
+    max-width: 700px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    width: 250px;
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+}
+
+.card h3 {
+    margin-top: 10px;
+}
+
+/* RODAPÉ */
+footer {
+    background: black;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">História do Futebol</div>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#historia">História</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <button class="btn">Entrar</button>
+</header>
+
+<!-- INICIO -->
+<section id="inicio">
+<div class="overlay">
+
+<h1>O Mundo do Futebol</h1>
+
+<p>
+O futebol é o esporte mais popular do planeta, reunindo milhões de pessoas em torno de uma paixão única. 
+Ele é jogado em praticamente todos os países e atravessa gerações, culturas e classes sociais. 
+Desde partidas em campos simples até grandes finais em estádios lotados, o futebol sempre emociona.
+</p>
+
+<div class="cards">
+
+<div class="card" onclick="mostrarCopa()">
+<img src="https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a">
+<h3>COPA DO MUNDO</h3>
+</div>
+
+<div class="card" onclick="mostrarEstadios()">
+<img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf">
+<h3>Grandes Estádios</h3>
+</div>
+
+<div class="card" onclick="mostrarJogadores()">
+<img src="https://images.unsplash.com/photo-1471295253337-3ceaaedca402">
+<h3>Jogadores Lendários</h3>
+</div>
+
+</div>
+
+<!-- INFO COPA -->
+<div id="copaInfo" style="display:none; margin-top:30px;">
+    <h2>Copa do Mundo</h2>
+
+    <p>
+    A Copa do Mundo é o maior torneio de futebol do planeta, organizada pela FIFA desde 1930. 
+    O primeiro torneio foi realizado no Uruguai e reuniu seleções de vários países.
+    </p>
+
+    <p>
+    Ao longo dos anos, a competição se tornou um dos eventos esportivos mais assistidos do mundo, 
+    reunindo bilhões de pessoas a cada edição.
+    </p>
+
+    <p>
+    <b>Maior campeão: Brasil</b><br>
+    O Brasil é a seleção mais vitoriosa da história da Copa do Mundo, com 5 títulos 
+    (1958, 1962, 1970, 1994 e 2002), sendo reconhecido mundialmente pelo seu futebol arte.
+    </p>
+</div>
+
+<!-- INFO ESTÁDIOS -->
+<div id="estadiosInfo" style="display:none; margin-top:30px;">
+    <h2>Maiores Estádios do Mundo</h2>
+
+    <p><b>Rungrado 1º de Maio (Coreia do Norte)</b><br>
+    Capacidade: ~114.000 pessoas</p>
+
+    <p><b>Melbourne Cricket Ground (Austrália)</b><br>
+    Capacidade: ~100.000 pessoas</p>
+
+    <p><b>Camp Nou (Espanha)</b><br>
+    Capacidade: ~99.000 pessoas</p>
+
+    <p><b>FNB Stadium (África do Sul)</b><br>
+    Capacidade: ~94.000 pessoas</p>
+</div>
+
+<!-- INFO JOGADORES -->
+<div id="jogadoresInfo" style="display:none; margin-top:30px;">
+    <h2>Maiores Jogadores da História</h2>
+
+    <p><b>Pelé</b><br>
+    Tricampeão mundial e considerado um dos maiores da história.</p>
+
+    <p><b>Maradona</b><br>
+    Ídolo argentino, campeão do mundo em 1986.</p>
+
+    <p><b>Messi</b><br>
+    Múltiplas Bolas de Ouro e campeão do mundo em 2022.</p>
+
+    <p><b>Cristiano Ronaldo</b><br>
+    Um dos maiores artilheiros da história do futebol.</p>
+
+    <p><b>Ronaldo Fenômeno</b><br>
+    Bicampeão mundial e um dos atacantes mais talentosos já vistos.</p>
+</div>
+
+</div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+<div class="overlay">
+
+<h1>Sobre o Futebol</h1>
+
+<p>
+O futebol é um esporte coletivo jogado entre dois times com o objetivo de marcar gols. 
+Ele exige habilidade, estratégia e trabalho em equipe. 
+Além disso, é uma das maiores formas de entretenimento do mundo.
+</p>
+
+<p>
+No Brasil, o futebol faz parte da cultura e da identidade nacional. 
+Grandes jogadores surgiram ao longo dos anos, encantando o mundo com talento e criatividade.
+</p>
+
+</div>
+</section>
+
+<!-- HISTORIA -->
+<section id="historia">
+<div class="overlay">
+
+<h1>A História do Futebol</h1>
+
+<p>
+O futebol moderno surgiu na Inglaterra no século XIX, quando foram criadas regras oficiais para o jogo. 
+Antes disso, diversas civilizações já praticavam esportes semelhantes.
+</p>
+
+<p>
+Com o tempo, o esporte se espalhou pelo mundo e ganhou popularidade. 
+A primeira Copa do Mundo aconteceu em 1930, no Uruguai, marcando o início de grandes competições internacionais.
+</p>
+
+<p>
+Hoje, o futebol é uma indústria global, com campeonatos, clubes e jogadores famosos em todos os continentes.
+</p>
+
+</div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+<div class="overlay">
+
+<h1>Contato</h1>
+
+<p>
+Email: anderson.ribeiro@gmail.com <br>
+WhatsApp: (49) 91234-8765
+</p>
+
+</div>
+</section>
+
+<!-- RODAPÉ -->
+<footer>
+<p>© 2026 - Site sobre a História do Futebol</p>
+</footer>
+
+<script>
+function mostrarCopa() {
+    var info = document.getElementById("copaInfo");
+    info.style.display = (info.style.display === "none") ? "block" : "none";
+}
+
+function mostrarEstadios() {
+    var info = document.getElementById("estadiosInfo");
+    info.style.display = (info.style.display === "none") ? "block" : "none";
+}
+
+function mostrarJogadores() {
+    var info = document.getElementById("jogadoresInfo");
+    info.style.display = (info.style.display === "none") ? "block" : "none";
+}
+</script>
+
+</body>
+</html>
